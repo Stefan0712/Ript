@@ -1,0 +1,25 @@
+.browse-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+.browse-container .exercise-body,
+.browse-container .workout-body,
+.browse-container .see-more-button{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.322);
+    padding: 0 15px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+.browse-container .see-more-button{
+    justify-content: center;
+    margin-top: 15px;
+}

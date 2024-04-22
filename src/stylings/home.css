@@ -1,0 +1,83 @@
+
+
+
+/* activity history */
+.activity-calendar{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.activity-calendar .day-container{
+    height: 50px;
+    width: 40px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    
+}
+.activity-calendar .day-container div:nth-child(1){
+    font-weight: bold;
+}
+
+.history{
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 25px;
+}
+.exercise-body{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.322);
+    padding: 0 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+
+/*quick activities */
+.quick-activities .container{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px 0;
+    margin-top: 0;
+}
+
+.quick-activity-button{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+
+/* today's plans */
+.todays-plans .container{
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}

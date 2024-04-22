@@ -1,38 +1,220 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fixed-top{
+  position: absolute;
+  top: 0px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fixed-bottom{
+  position: absolute;
+  bottom: 0px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+:root{
+  --primary-color: #151315;
+  --secondary-color: #252425;
+  --accent-color: #FB6B2F;
+}
+.App{
+  background-color: var(--primary-color);
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+.flex-container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+}
+#mobile-navigation{
+  width: 100vw;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  background-color: var(--secondary-color);
+}
+#mobile-navigation a{
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+#mobile-navigation a img{
+  height: 50%;
   color: white;
 }
+#mobile-navigation .center-button img{
+  height: 70%;
+}
+#mobile-navigation a:nth-child(2) img{
+  height: 40%;
+}
+.rotate-left{
+  transform: rotateX(-90);
+}
+.page-header{
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 50px;
+  position: absolute;
+  top: 0px;
+}
+.page-header a{
+  height: 50px;
+  width: 50px;
+  background-color: var(--secondary-color);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+}
+.page-header h3{
+  margin-right: auto;
+  color: white;
+  width: calc(100% - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h4{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: white;
+}
+.section-container{
+  background-color: var(--secondary-color);
+  width: 95%;
+  border-radius: 5px;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.accent-color{
+  background-color: var(--accent-color);
+}
+.big-button{
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+/* ^^^ Mobile Nav  ^^^ */
 
-.App-link {
-  color: #61dafb;
+
+
+/* vvv quick add menu vvv */
+
+.quick-add-container{
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 75px;
+  z-index: 100;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 25px 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.205);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.quick-add-container .quick-add-button{
+  height: 50px !important;
+  width: 80% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: rgba(255, 255, 255, 0.384) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ^^^ Quick Add Menu ^^^ */
+
+
+/* vvv Stopwatch vvv*/
+
+#stopwatch-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
 }
+#stopwatch-page .stopwatch-body{
+  height: 250px;
+}
+#stopwatch-page .stopwatch-body .time{
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+}
+#stopwatch-page .stopwatch-body .lap-time{
+  font-size: 2rem;
+  color: gray;
+  font-weight: bold;
+}
+#stopwatch-page .stopwatch-body .buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 75%;
+  height: 50px;
+  margin-top: 25px;
+}
+#stopwatch-page .stopwatch-body .buttons button{
+  height: 40px;
+  width: 75px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  background-color: var(--accent-color);
+}
+#stopwatch-page .laps-container{
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+#stopwatch-page .laps-container .lap-body{
+  width: 100%;
+  height: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+
+}
+
+/* ^^^ Stopwatch ^^^ */
